@@ -1,0 +1,261 @@
+/* Importació de font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset de margens y paddings - Estableix un estil uniforme per a tots els elements */
+* {
+    margin: 0; /* Elimina el marge per defecte */
+    padding: 0; /* Elimina el padding per defecte */
+    box-sizing: border-box; /* Inclou el padding i el marge en les dimensions totals */
+    font-family: 'Poppins', sans-serif; /* Defineix la font global per a tota la pàgina */
+}
+
+body {
+    background: linear-gradient(to bottom right, #f4f4f4, #e6f8f5); /* Fons amb un degradat suau */
+    color: #0a0136; /* Color de text fosc per a un bon contrast */
+}
+
+/* Navegació */
+header {
+    padding: 10px 20px; /* Espai al voltant del contingut del capçalera */
+    display: flex; /* Utilitza Flexbox per organitzar els elements */
+    justify-content: space-between; /* Alinea els elements a les vores del capçalera */
+    align-items: center; /* Alinea els elements verticalment al centre */
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Alinea verticalment els elements del menú */
+    justify-content: space-between; /* Alinea horitzontalment els elements del menú */
+    width: 100%; /* El menú ocupa tota l'amplada disponible */
+}
+
+nav .logo img {
+    height: 50px; /* Defineix l'alçada de la imatge del logo */
+}
+
+nav ul {
+    list-style: none; /* Elimina els punts de la llista */
+    display: flex; /* Organitza els elements del menú de forma horitzontal */
+    gap: 30px; /* Afegeix espai entre els elements del menú */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina l'ús del subratllat als enllaços */
+    font-weight: bold; /* Fa que els enllaços siguin en negreta */
+    color: #0a0136; /* Defineix el color dels enllaços */
+}
+
+nav .menu-icon {
+    font-size: 24px; /* Augmenta la mida de l'icona de menú */
+    cursor: pointer; /* Canvia el cursor quan passa sobre l'icona */
+}
+
+/* Contenido Principal */
+.intro {
+    display: flex;
+    justify-content: space-between; /* Alinea els elements del contingut a les vores */
+    align-items: center; /* Alinea els elements verticalment */
+    padding: 50px 20px; /* Afegeix espai interior per a les seccions */
+    gap: 20px; /* Afegeix espai entre els elements dins de la secció */
+}
+
+.text-container {
+    max-width: 50%; /* Limita l'amplada màxima del contingut de text */
+}
+
+.text-container h1 {
+    font-size: 3rem; /* Mida gran per al títol principal */
+    font-weight: 700; /* Utilitza negreta per destacar el títol */
+    margin-bottom: 20px; /* Espai a sota del títol */
+}
+
+.text-container p {
+    font-size: 1rem; /* Mida de text per al paràgraf */
+    font-weight: 400; /* Normalitza el pes del text */
+}
+
+.image-container {
+    background: white; /* Fons blanc per a la imatge */
+    border-radius: 10px; /* Bordes arrodonides per donar un efecte suau */
+    padding: 20px; /* Afegeix espai al voltant de la imatge */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombra suau per a un efecte flotant */
+}
+
+
+.image-container img {
+    width: 200px;
+    height: auto;
+}
+/* Estils generals - Pantalles grans */
+body {
+    font-size: 16px; /* Mida base de font */
+}
+
+/* Configuració per tablets (màxim 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        gap: 20px; /* reduir l'espai entre enllaços */
+    }
+
+    .intro {
+        flex-direction: column; /* Posar el text i la imatge en columna */
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+    .text-container h1 {
+        font-size: 2rem; /* Reduir la mida del títol */
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .image-container img {
+        width: 150px; /* Reduir la imatge */
+    }
+}
+
+/* Configuració per a smartphones (amplada màxima 480px) */
+@media (max-width: 480px) {
+    nav ul {
+        display: none; /* Amaga el menú complet per a dispositius amb pantalles petites */
+    }
+
+    nav .menu-icon {
+        display: block; /* Mostra l'icona de menú hamburguesa per a dispositius petits */
+    }
+
+    .intro {
+        padding: 20px 5px; /* Redueix l'espai al voltant del contingut principal per a pantalles petites */
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem; /* Redueix la mida del títol per adaptar-se a dispositius més petits */
+    }
+
+    .text-container p {
+        font-size: 0.8rem; /* Redueix la mida del text per a pantalles petites */
+    }
+
+    .image-container img {
+        width: 120px; /* Redueix la mida de la imatge per a pantalles petites */
+    }
+}
+
+nav ul li a.active {
+    color: #ff5722; /* Canvia el color de l'enllaç actiu a taronja */
+    border-bottom: 2px solid #ff5722; /* Afegeix una línia sota l'enllaç actiu per ressaltar-lo */
+}
+
+/* Estructura bàsica del cos */
+body {
+    font-family: Arial, sans-serif; /* Defineix la font per defecte del cos del text */
+    margin: 0; /* Elimina el marge per defecte al voltant del cos */
+    padding: 0; /* Elimina l'espai interior per defecte */
+}
+
+/* Estils per a la navegació */
+header nav ul {
+    display: flex; /* Utilitza flexbox per a alinear els elements de la barra de navegació */
+    justify-content: center; /* Centra els elements de la llista a la barra de navegació */
+    gap: 20px; /* Afegeix espai entre els enllaços del menú */
+}
+
+header nav ul li a.active {
+    font-weight: bold; /* Fa que l'enllaç actiu es vegi en negreta */
+    color: #6200ea; /* Canvia el color de l'enllaç actiu a un to morat */
+}
+
+/* Estils de les receptes */
+.recipes {
+    display: flex;
+    flex-direction: column; /* Mostra les receptes en columna */
+    gap: 20px; /* Afegeix espai entre les receptes */
+    padding: 20px; /* Afegeix espai interior al voltant de les receptes */
+}
+
+.recipe {
+    display: flex;
+    align-items: center; /* Alinea els elements horitzontalment al centre */
+    gap: 20px; /* Afegeix espai entre el text i la imatge de la recepta */
+    background: #f9f9f9; /* Fons gris clar per a cada recepta */
+    padding: 15px; /* Afegeix espai interior dins de la recepta */
+    border-radius: 10px; /* Bordes arrodonits per a un aspecte més suau */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombratge lleuger per donar profunditat a la recepta */
+}
+
+.recipe-text {
+    flex: 1; /* Fes que el text ocupi la màxima amplada disponible */
+}
+
+.recipe-text h2 {
+    color: #6200ea; /* Canvia el color del títol de la recepta a morat */
+    margin: 0 0 10px; /* Afegeix un espai a sota del títol */
+}
+
+.recipe-text p {
+    margin: 5px 0; /* Afegeix una mica d'espai entre els paràgrafs dins de la recepta */
+}
+
+.recipe-image img {
+    width: 150px; /* Defineix la mida de la imatge de la recepta */
+    height: 150px; /* Manté l'altura constant de la imatge */
+    object-fit: cover; /* Asegura que la imatge cobreixi tota la zona sense deformar-se */
+    border-radius: 10px; /* Bordes arrodonits per a les imatges */
+}
+
+/* Estil del formulari d'ajuda */
+.help-form {
+    background: #ffffff; /* Fons blanc per al formulari d'ajuda */
+    padding: 20px; /* Afegeix espai interior al formulari */
+    border-radius: 10px; /* Bordes arrodonits per a un aspecte més suau */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombratge lleuger per donar profunditat al formulari */
+    margin-top: 50px; /* Afegeix espai superior per separar el formulari d'altres elements */
+}
+
+.help-form h2 {
+    font-size: 1.8rem; /* Defineix la mida del títol del formulari */
+    margin-bottom: 15px; /* Afegeix espai a sota del títol */
+}
+
+.help-form p {
+    font-size: 1rem; /* Defineix la mida del text dins del formulari */
+    margin-bottom: 20px; /* Afegeix espai a sota del text */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Afegeix espai a sota de cada grup de formulari */
+}
+
+.form-group label {
+    display: block; /* Mostra les etiquetes com a elements de bloc per organitzar millor els camps */
+    font-weight: bold; /* Fa que l'etiqueta es vegi en negreta */
+    margin-bottom: 5px; /* Afegeix una mica d'espai sota l'etiqueta */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* Fes que els camps d'entrada ocupin tot l'amplada disponible */
+    padding: 10px; /* Afegeix espai interior als camps d'entrada */
+    border: 1px solid #ddd; /* Defineix un bord de color gris clar per als camps d'entrada */
+    border-radius: 5px; /* Bordes arrodonits per als camps d'entrada */
+    font-size: 1rem; /* Defineix la mida de la font per als camps d'entrada */
+}
+
+button {
+    background-color: #ff5722; /* Fons taronja per al botó */
+    color: white; /* Color del text en blanc */
+    padding: 10px 20px; /* Afegeix espai interior al botó */
+    border: none; /* Elimina el bord del botó */
+    border-radius: 5px; /* Bordes arrodonits per al botó */
+    cursor: pointer; /* Mostra el cursor de mà quan s'apunta al botó */
+    font-size: 1.1rem; /* Augmeta lleugerament la mida del text dins del botó */
+}
+
+button:hover {
+    background-color: #e64a19; /* Canvia el color del fons a un taronja més fosc quan el botó és seleccionat */
+}
